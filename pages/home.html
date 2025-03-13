@@ -1,16 +1,18 @@
 <div class="container-fluid">
     <h4>Forecast by City</h4>
-    <div class="form-group">
-        <div class="row">
-            <div class="col-md-8">
-                <label for="city">City: </label>
-                <input type="text" id="city" ng-model="city" class="form-control">
-            </div>
-            <div class="col-md-4">
-                <label for="days">Days: </label>
-                <input type="number" id="days" ng-model="days" min="1" max="7" class="form-control" style="width: 100px;">
+    <form ng-submit="submit()">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-8">
+                    <label for="city">City: </label>
+                    <input type="text" id="city" ng-model="city" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <label for="days">Days: </label>
+                    <input type="number" id="days" ng-model="days" min="1" max="7" class="form-control" style="width: 100px;">
+                </div>
             </div>
         </div>
-    </div>
-    <a href="#/forecast/{{days}}" class="btn btn-primary">Get Forecast</a>
+        <input type="submit" class="btn btn-primary" value="Get Forecast" />
+    </form>
 </div>

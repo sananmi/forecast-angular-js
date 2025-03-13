@@ -13,7 +13,7 @@ weatherApp.controller('weatherReportController', ['$scope', '$routeParams', 'cit
     });
 }]);
 
-weatherApp.controller('homeController', ['$scope', '$routeParams', 'cityService', function($scope, $routeParams, cityService) {
+weatherApp.controller('homeController', ['$scope', '$routeParams', '$location', 'cityService', function($scope, $routeParams, $location, cityService) {
     $scope.city = cityService.city;
     $scope.days = $routeParams.days || 2;
 
@@ -24,4 +24,8 @@ weatherApp.controller('homeController', ['$scope', '$routeParams', 'cityService'
     $scope.$watch('days', function() {
         cityService.days = $scope.days;
     });
+
+    $scope.submit = function() {
+        $location.path("/forecast");
+    };
 }]);

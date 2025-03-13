@@ -18,14 +18,4 @@ weatherApp.service('cityService', ['$http', '$resource', function($http, $resour
             }
         }
     });
-
-    this.getForecast =  $resource('https://api.weather.gov/gridpoints/MTR/88,126/forecast', {}, {
-        get: {
-            method: 'GET',
-            isArray: false,
-            headers: {
-                "User-Agent": "AngularJS-Demo-App"
-            }
-        }
-    });
 }]);
