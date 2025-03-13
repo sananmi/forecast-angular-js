@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ weatherDay.name }}:  {{ weatherDay.startTime | date: 'short' }}</h3>
+    </div>
+    <div class="panel-body">
+        temperature: {{ weatherDay.temperature }}°{{ weatherDay.temperatureUnit }}
+        <br>
+        {{ weatherDay.detailedForecast }}
+    </div>
+</div>
